@@ -5,14 +5,13 @@ import Camera from "react-html5-camera-photo";
 import Complete from "../../assets/complete.svg";
 import { useNavigate } from 'react-router-dom';
 import { imgDomicilio, imgFactura, imgIne, imgLicencia } from '../../assets/images';
+import { upload } from "../../utils/modal";
 import "./styles.css";
 
 const Documents = () => {
-
     const navigate = useNavigate();
     const querystring = window.location.search
     const params = new URLSearchParams(querystring)
-
     const expediente=params.get('expediente');
     const token=params.get('token'); 
     const src=params.get('src');
@@ -213,6 +212,7 @@ const Documents = () => {
                 imgIne={imgIne}
                 imgLicencia={imgLicencia}
                 Camera={Camera}
+                upload={upload}
             />:<></>}    
         </div>
     );

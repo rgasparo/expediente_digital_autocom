@@ -1,5 +1,4 @@
 import { useState, useEffect, useCallback } from "react";
-import { upload } from "../../utils/modal";
 import InitialStep from "./InitialStep";
 import PreviewStep from "./PreviewStep";
 import LoaderComponent from "./LoaderComponent";
@@ -52,7 +51,8 @@ const DocumentsModal = ({
   imgFactura,
   imgIne,
   imgLicencia,
-  Camera
+  Camera,
+  upload
 }) => {
 
     const STEPS = {

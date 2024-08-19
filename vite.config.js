@@ -16,6 +16,7 @@ export default defineConfig({
         './DocumentsProvider': './src/context/DocumentsProvider',
         './useDocuments': './src/hooks/useDocuments',
         './images': './src/assets/images',
+        './modalsFunctions': './src/utils/modal.js',
       },
       shared: [
         "react", 
