@@ -1,0 +1,456 @@
+  
+#outer-circle{
+  display: none!important;
+}
+
+.react-html5-camera-photo video{
+  border: 4px solid rgba(32, 193, 231, 1);
+}
+
+.customContainer {
+    font-family: 'Nissan Brand Regular';
+    background-color: #f5f5f5;
+    color: rgba(105, 105, 105, 1);
+    background-image: url("../../src/assets/header.png");
+    background-repeat: no-repeat;
+    background-size: 100% 300px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .modalBtn{
+    height: 36px;
+    gap: 0px;
+    border-radius: 5px;
+    opacity: 0px;
+    color:white;
+    background-color: #BE0021;
+    font-family: Nissan Brand;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 19.1px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+  
+  .title{
+    font-family: Nissan Brand;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 27.28px;
+    letter-spacing: 0.09em;
+    text-align: left;
+    margin: 40px 40px 40px 0px;
+    color:white;
+  }
+  
+  .subtitle{
+    font-family: Nissan Brand;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: 0.09em;
+    text-align: left;
+  
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 2px 15px;
+  }
+  
+  .unidad{
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 24.38px;
+    text-transform: uppercase;
+  }
+  
+  .unidad2{
+    font-family: Montserrat;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 29.26px;
+    text-transform: uppercase;
+  }
+  
+  .color-rojo{
+    color: #BE0021;
+  }
+  
+  .color-gris-oscuro{
+    color:#696969;
+  }
+  
+  .color-black{
+    color:#000;
+  }
+  .container-main{
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin-bottom: 40px;
+    padding: 30px 20px;
+  }
+  
+  .oferta{
+    font-family: 'Nissan Brand Regular';
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16.37px;
+  }
+  
+  .inspeccion{
+    margin-top:-6px;
+    font-family: 'Nissan Brand Regular';
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16.37px;
+  }
+  
+  .fecha-hora{
+    font-family: Nissan Brand;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16.37px;
+  }
+  
+  
+  .instrucciones{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: Nissan Brand Regular;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16.37px;
+  }
+  .loaded{
+    height: 36px;
+    gap: 0px;
+    border-radius: 5px;
+    opacity: 0px;
+    color:#BE0021;
+    background-color: white;
+    border: 1px solid #BE0021;
+    font-family: Nissan Brand;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 19.1px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+
+  .copy2{
+      
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 22px;
+    text-align: center;
+    margin-top:20px;
+    margin-bottom:20px;
+  }
+  
+  
+  @media (min-width: 768px) {
+    
+    .title{
+      font-family: Nissan Brand;
+      font-size: 45px;
+      font-weight: 700;
+      line-height: 36.38px;
+      letter-spacing: 0.09em;
+      text-align: left;
+      margin: 50px 40px 40px 0px;
+      color:white;
+    }
+  
+    .container-main{
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+      margin-bottom: 40px;
+      padding: 30px 60px;
+    }
+    
+    .subtitle{
+      font-family: Nissan Brand;
+      font-family: Nissan Brand;
+      font-size: 25px;
+      font-weight: 700;
+      line-height: 34.1px;
+      letter-spacing: 0.09em;
+      text-align: left;
+      border: 1px solid white;
+      border-radius: 5px;
+      padding: 2px 15px;
+    }
+    
+    .unidad{
+      font-family: Nissan Brand;
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 43.65px;
+      text-transform: uppercase;
+    }
+    
+    .unidad2{
+      font-family: Nissan Brand;
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 43.65px;
+      text-transform: uppercase;
+      margin-top: -5px;
+    }
+    
+    .color-rojo{
+      color: #BE0021;
+    }
+    
+    .color-gris-oscuro{
+      color:#696969;
+    }
+    
+    .color-black{
+      color:#000;
+    }
+    
+    .oferta{
+      font-family: Nissan Brand;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 24.55px;
+    }
+    
+    .inspeccion{
+      margin-top:-6px;
+      font-family: Nissan Brand;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 24.55px;
+    }
+    
+    .copy{
+      margin-top:40px;
+      font-family: Nissan Brand Regular;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 32.74px;
+    }
+    
+    .fecha-hora{
+      font-family: Nissan Brand;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 32.74px;
+    }
+    
+    
+    .instrucciones{
+      margin-top: 20px;
+      margin-bottom: 20px;
+      font-family: Nissan Brand Regular;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 27.28px;  
+    }
+
+    .tips{
+      margin-top: 20px;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 27.28px;
+      text-align: left;
+    }
+    
+    .lista{
+      margin-top: 10px;
+      margin-left: 20px;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 30px;
+    }
+    
+    .nota{
+      font-family: Nissan Brand Regular;
+      margin-top: 30px;
+      margin-bottom: 20px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 21.82px;
+    }
+    
+    .copy2 {
+      font-family: Nissan Brand Regular;
+      margin-top:20px;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 32.74px;
+      text-align: center;
+  
+    }
+    
+    .contacto{
+      margin: 30px 40px 30px 40px;
+      font-family: Montserrat;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 19.5px;
+      text-align: center;
+  
+    }
+    
+    .contacto-bold{
+      font-family: Montserrat;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 19.5px;
+      text-decoration: underline;
+    }
+  
+  }
+  
+  @media (min-width: 1024px) {
+    .title{
+      font-family: Nissan Brand;
+      font-size: 45px;
+      font-weight: 700;
+      line-height: 61.38px;
+      letter-spacing: 0.09em;
+      text-align: left;
+      margin: 70px 40px 70px 40px;
+      color:white;
+    }
+  
+    .container-main{
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+      margin-bottom: 40px;
+      padding: 30px 40px;
+    }
+    
+    .subtitle{
+      font-family: Nissan Brand;
+      font-size: 25px;
+      font-weight: 700;
+      line-height: 34.1px;
+      letter-spacing: 0.09em;
+      text-align: left;
+      border: 1px solid white;
+      border-radius: 5px;
+      padding: 2px 15px;
+    }
+    
+    .unidad{
+      font-family: 'Nissan Brand';
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 43.65px;
+      text-transform: uppercase;
+    }
+    
+    .unidad2{
+      font-family: 'Nissan Brand';
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 43.65px;
+      text-transform: uppercase;
+    }
+    
+    .color-rojo{
+      color: #BE0021;
+    }
+    
+    .color-gris-oscuro{
+      color:#696969;
+    }
+    
+    .color-black{
+      color:#000;
+    }
+    
+    .oferta{
+      margin-top:20px;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 24.55px;
+      font-family: 'Nissan Brand';
+    }
+    
+    .inspeccion{
+      margin-top:-6px;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 24.55px;
+      font-family: 'Nissan Brand';
+    }
+    
+    .copy{
+      
+      margin-top:40px;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 32.74px;
+    }
+    
+    .fecha-hora{
+      font-family: 'Nissan Brand';
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 32.74px;
+      
+    }
+    
+    
+    .instrucciones{
+      margin-top: 40px;
+      margin-bottom: 20px;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 27.28px;
+      
+    }
+    
+    .tips{
+      margin-top: 40px;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 27.28px;
+    }
+    
+    .lista{
+      margin-top: 10px;
+      margin-left: 20px;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 27.28px;
+    }
+    
+    .nota{
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 21.82px;
+      margin-top: 30px;
+      margin-bottom: 20px;
+    }
+    
+    .copy2{
+      
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 32.74px;
+      text-align: center;
+  
+      margin-top:20px;
+    }
+    
+    .contacto{
+      font-family: Montserrat;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 19.5px;
+      text-align: center;
+      margin: 30px 40px 30px 40px;
+    }
+    
+    .contacto-bold{
+      font-family: Montserrat;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 19.5px;
+      text-align: center;    
+      text-decoration: underline;
+    }
+  }

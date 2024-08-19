@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: 'Nissan Brand';
+    src: url('../src/assets/fonts/NissanBrandBold.otf') format('otf'),
+          url('../src/assets/fonts/NissanBrandBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Nissan Brand Regular';
+    src: url('../src/assets/fonts/NissanBrandRegular.otf') format('otf'),
+          url('../src/assets/fonts/NissanBrandRegular.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }

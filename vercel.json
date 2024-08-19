@@ -1,0 +1,17 @@
+{
+    "rewrites":  [
+        {"source": "/(.*)", "destination": "/"}
+    ],
+    "headers": [
+      {
+        "source": "/assets/remoteEntry.js",
+        "headers": [
+          {
+            "key": "Access-Control-Allow-Origin",
+            "value": "*"
+          }
+        ]
+      }
+    ]
+  }
+  
