@@ -1,55 +1,274 @@
 
-  .select {
-    margin-top: -20px;
-    border: 1px solid #cecece;
-    height: 35px;
-    padding: 0px 12px 0px 12px;
-    gap: 0px;
-    border-radius: 5px;
-    font-family: Montserrat;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 15px;
-    letter-spacing: 0.15000000596046448px;
+.select {
+  margin-top: -20px;
+  border: 1px solid #cecece;
+  height: 35px;
+  padding: 0px 12px 0px 12px;
+  gap: 0px;
+  border-radius: 5px;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 15px;
+  letter-spacing: 0.15000000596046448px;
+  text-align: left;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+  appearance:none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 5px;
+}
+
+.label{
+  font-family: Montserrat;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+  letter-spacing: 0.15000000596046448px;
+  text-align: left;
+  z-index: 10;
+}
+
+.labelSpan{
+  background-color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+}
+   
+.secondary{
+  height: 36px;
+  gap: 0px;
+  border-radius: 5px;
+  opacity: 0px;
+  color:white;
+  background-color: black;
+  
+  font-family: Nissan Brand;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 19.1px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.wrapper-modal{
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.modal{
+  background-color: white!important;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.30)!important;
+  border-radius: 6px!important;
+  max-height: 95vh;
+  overflow-y: scroll;
+}
+
+.modal .wrapper-info{
+  padding: 20px;
+  width: 100%;
+}
+
+.modal h2{
+  font-family: Nissan Brand;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24.55px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  color:#000;
+}
+
+.modal p{
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.63px;
+  text-align: left;
+}
+
+.modal .bgImg{
+  margin-top: -40px;
+  border-radius: 6px 6px 0px 0px;
+}
+
+.wrapper-close{
+  padding: 0 !important;
+  margin: 0;
+}
+
+.wrapper-close p{
+  padding: 0 ;
+  margin: 0;
+  text-align: right;
+}
+
+.wrapper-close button{
+  border-radius: 10px;
+  width: 20px;
+  height: 20px;
+  margin-top: 10px;
+  margin-right: 14px;
+  background-color: transparent;
+}
+
+.wrapper-camera{
+  background-color: #000;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  padding-bottom: 30px;
+}
+
+.wrapper-camera .copy{
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14.63px;
+  text-align: center;
+  color: white;
+}
+
+.react-html5-camera-photo .camera{
+  border: 4px solid rgba(32, 193, 231, 1);
+}
+
+.wrapper-preview{
+  background-color: #fff;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  text-align: left;
+}
+
+.wrapper-preview .wrapper-info{
+  padding: 20px;
+  width: 100%;
+}
+
+.wrapper-preview .wrapper-info h2{
+  font-family: Nissan Brand;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24.55px;
+  letter-spacing: -0.02em;
+  color:#000;
+}
+
+.wrapper-preview .wrapper-info p{
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.63px;
+  margin-top: 20px;
+}
+
+.wrapper-preview .document{
+  /* border: 4px solid rgba(32, 193, 231, 1); */
+  width: 85%;
+}
+
+.wrapper-loader{
+  padding: 20px;
+}
+
+.wrapper-loader p{
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  text-align: center;
+  color:white;
+}
+
+.wrapper-loader{
+  background-color: #000;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  padding: 80px 0
+}
+
+.modal-lista{
+  padding-left: 20px;
+}
+
+.nota-factura{
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14.63px;
+  text-align: left;
+}
+
+.negrita{
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14.63px;
+}
+
+.enlace{
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14.63px;
+  color:rgba(190, 0, 33, 1);
+}
+
+#outer-circle{
+  display: none;
+}
+
+.modalBtn{
+  height: 36px;
+  gap: 0px;
+  border-radius: 5px;
+  opacity: 0px;
+  color:white;
+  background-color: #BE0021;
+  font-family: Nissan Brand;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 19.1px;
+  box-shadow: 0px 4px 4px 0px rgba(40, 28, 28, 0.25);
+}
+
+.modalBtnDisabled{
+  height: 36px;
+  gap: 0px;
+  border-radius: 5px;
+  opacity: 0px;
+  color:#717a8b;
+  background-color: #dcdfe6!important;
+  font-family: Nissan Brand;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 19.1px;
+  cursor: not-allowed;
+}
+
+.closeIcon{
+  height: 20px;
+  position: fixed;
+}
+
+@media (min-width: 768px) {
+  
+  .subtitle{
+    font-family: Nissan Brand;  
+    font-family: Nissan Brand;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 34.1px;
+    letter-spacing: 0.09em;
     text-align: left;
-    -moz-appearance:none;
-    -webkit-appearance:none;
-    appearance:none;
-    background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
-    background-repeat: no-repeat;
-    background-position-x: 100%;
-    background-position-y: 5px;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 2px 15px;
   }
 
-  .label{
-    font-family: Montserrat;
-    font-size: 10px;
-    font-weight: 400;
-    line-height: 12px;
-    letter-spacing: 0.15000000596046448px;
-    text-align: left;
-    z-index: 10;
-  }
-  
-  .labelSpan{
-    background-color: #fff;
-    font-size: 14px;
-    font-weight: 400;
-  }
-     
-  .secondary{
-    height: 36px;
-    gap: 0px;
-    border-radius: 5px;
-    opacity: 0px;
-    color:white;
-    background-color: black;
-    
-    font-family: Nissan Brand;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 19.1px;
+  .container-main{
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin-bottom: 40px;
+    padding: 30px 60px;
   }
 
   .wrapper-modal{
@@ -57,11 +276,13 @@
   }
   
   .modal{
-    background-color: white!important;
-    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.30)!important;
-    border-radius: 6px!important;
-    max-height: 95vh;
-    overflow-y: scroll;
+    background-color: white;
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+  }
+
+  .modalText{
+    text-align: left;
   }
   
   .modal .wrapper-info{
@@ -71,30 +292,30 @@
   
   .modal h2{
     font-family: Nissan Brand;
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 700;
-    line-height: 24.55px;
+    line-height: 32.74px;
     letter-spacing: -0.02em;
     text-align: left;
     color:#000;
   }
-  
+
   .modal p{
     font-family: Montserrat;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 400;
-    line-height: 14.63px;
+    line-height: 19.5px;
     text-align: left;
+    margin-top: 10px;
   }
   
   .modal .bgImg{
     margin-top: -40px;
-    border-radius: 6px 6px 0px 0px;
   }
   
   .wrapper-close{
-    padding: 0 !important;
-    margin: 0;
+    /* padding: 0 !important;
+    margin: 0; */
   }
   
   .wrapper-close p{
@@ -104,30 +325,23 @@
   }
   
   .wrapper-close button{
-    border-radius: 10px;
-    width: 20px;
-    height: 20px;
-    margin-top: 10px;
-    margin-right: 14px;
+    margin-right: 10px;
     background-color: transparent;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.25);
   }
 
   .wrapper-camera{
     background-color: #000;
-    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
-    border-radius: 6px;
-    padding-bottom: 30px;
   }
-  
+
   .wrapper-camera .copy{
     font-family: Montserrat;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 700;
-    line-height: 14.63px;
+    line-height: 19.5px;
     text-align: center;
     color: white;
   }
-
   
   .react-html5-camera-photo .camera{
     border: 4px solid rgba(32, 193, 231, 1);
@@ -135,13 +349,10 @@
   
   .wrapper-preview{
     background-color: #fff;
-    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
-    border-radius: 6px;
-    text-align: left;
   }
   
   .wrapper-preview .wrapper-info{
-    padding: 20px;
+    padding: 20px 50px;
     width: 100%;
   }
   
@@ -156,15 +367,16 @@
   
   .wrapper-preview .wrapper-info p{
     font-family: Montserrat;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 400;
-    line-height: 14.63px;
+    line-height: 19.5px;
+    text-align: left;
     margin-top: 20px;
   }
   
   .wrapper-preview .document{
-    /* border: 4px solid rgba(32, 193, 231, 1); */
-    width: 85%;
+    /* border: 4px solid rgba(32, 193, 231, 1)!important; */
+    width: 90%;
   }
   
   .wrapper-loader{
@@ -179,210 +391,11 @@
     text-align: center;
     color:white;
   }
-  
-  .wrapper-loader{
-    background-color: #000;
-    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
-    border-radius: 6px;
-    padding: 80px 0
-  }
-  
-  .modal-lista{
-    padding-left: 20px;
-  }
-  
-  .nota-factura{
-    font-family: Montserrat;
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 14.63px;
-    text-align: left;
-  }
-  
-  .negrita{
-    font-family: Montserrat;
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 14.63px;
-  }
-  
-  .enlace{
-    font-family: Montserrat;
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 14.63px;
-    color:rgba(190, 0, 33, 1);
-  }
+}
 
-  #outer-circle{
-    display: none;
+@media (min-width: 1024px) {
+  .wrapper-preview .document{
+    /* border: 4px solid rgba(32, 193, 231, 1); */
+    width: 90%;
   }
-
-  .modalBtn{
-    height: 36px;
-    gap: 0px;
-    border-radius: 5px;
-    opacity: 0px;
-    color:white;
-    background-color: #BE0021;
-    font-family: Nissan Brand;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 19.1px;
-    box-shadow: 0px 4px 4px 0px rgba(40, 28, 28, 0.25);
-  }
-
-  .closeIcon{
-    height: 20px;
-    position: fixed;
-  }
-  
-  @media (min-width: 768px) {
-    
-    .subtitle{
-      font-family: Nissan Brand;  
-      font-family: Nissan Brand;
-      font-size: 25px;
-      font-weight: 700;
-      line-height: 34.1px;
-      letter-spacing: 0.09em;
-      text-align: left;
-      border: 1px solid white;
-      border-radius: 5px;
-      padding: 2px 15px;
-    }
-
-    .container-main{
-      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-      margin-bottom: 40px;
-      padding: 30px 60px;
-    }
-  
-    .wrapper-modal{
-      background-color: rgba(0, 0, 0, .5);
-    }
-    
-    .modal{
-      background-color: white;
-      box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
-      border-radius: 6px;
-    }
-
-    .modalText{
-      text-align: left;
-    }
-    
-    .modal .wrapper-info{
-      padding: 20px;
-      width: 100%;
-    }
-    
-    .modal h2{
-      font-family: Nissan Brand;
-      font-size: 24px;
-      font-weight: 700;
-      line-height: 32.74px;
-      letter-spacing: -0.02em;
-      text-align: left;
-      color:#000;
-    }
-  
-    .modal p{
-      font-family: Montserrat;
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 19.5px;
-      text-align: left;
-      margin-top: 10px;
-    }
-    
-    .modal .bgImg{
-      margin-top: -40px;
-    }
-    
-    .wrapper-close{
-      /* padding: 0 !important;
-      margin: 0; */
-    }
-    
-    .wrapper-close p{
-      padding: 0 ;
-      margin: 0;
-      text-align: right;
-    }
-    
-    .wrapper-close button{
-      margin-right: 10px;
-      background-color: transparent;
-      box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.25);
-    }
-  
-    .wrapper-camera{
-      background-color: #000;
-    }
-
-    .wrapper-camera .copy{
-      font-family: Montserrat;
-      font-size: 16px;
-      font-weight: 700;
-      line-height: 19.5px;
-      text-align: center;
-      color: white;
-    }
-    
-    .react-html5-camera-photo .camera{
-      border: 4px solid rgba(32, 193, 231, 1);
-    }
-    
-    .wrapper-preview{
-      background-color: #fff;
-    }
-    
-    .wrapper-preview .wrapper-info{
-      padding: 20px 50px;
-      width: 100%;
-    }
-    
-    .wrapper-preview .wrapper-info h2{
-      font-family: Nissan Brand;
-      font-size: 18px;
-      font-weight: 700;
-      line-height: 24.55px;
-      letter-spacing: -0.02em;
-      color:#000;
-    }
-    
-    .wrapper-preview .wrapper-info p{
-      font-family: Montserrat;
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 19.5px;
-      text-align: left;
-      margin-top: 20px;
-    }
-    
-    .wrapper-preview .document{
-      /* border: 4px solid rgba(32, 193, 231, 1)!important; */
-      width: 90%;
-    }
-    
-    .wrapper-loader{
-      padding: 20px;
-    }
-    
-    .wrapper-loader p{
-      font-family: Montserrat;
-      font-size: 16px;
-      font-weight: 600;
-      line-height: 20px;
-      text-align: center;
-      color:white;
-    }
-  }
-  
-  @media (min-width: 1024px) {
-    .wrapper-preview .document{
-      /* border: 4px solid rgba(32, 193, 231, 1); */
-      width: 90%;
-    }
-  }
+}

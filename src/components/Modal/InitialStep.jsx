@@ -1,5 +1,7 @@
+import { useEffect, useState } from 'react';
 import CloseBtn from '../../../src/assets/close.svg';
 import styles from './styles.module.css';
+
 const InitialStep = ({ 
   tipo,
   title,
@@ -14,6 +16,17 @@ const InitialStep = ({
   handleClose,
   header 
 }) => {
+  const [isButtonDisabled, setIsButtonDisabled] = useState(true);
+  const [buttonClass, setButtonClass] = useState('modalBtnDisabled');
+
+  useEffect(() => {
+    const isDisabled = (tipo === "factura actual" && (!tipoFactura || !anoFactura)) || 
+                      (tipo === "identificacion" && !identificacion);
+
+    setIsButtonDisabled(isDisabled);
+    setButtonClass(isDisabled ? `${styles.modalBtnDisabled}` : `${styles.modalBtn}`);
+  }, [tipo, identificacion, tipoFactura, anoFactura]);
+
   const modalContent = [
     {
       id: 1,
@@ -28,9 +41,10 @@ const InitialStep = ({
             </label>
             <select 
               className={`${styles.select}`} 
-              value={identificacion ? identificacion : []} 
+              value={identificacion || ""}
               onChange={(e) => setIdentificacion(e.target.value)}
-              >
+            >
+              <option value="">Elige una opción</option>
               <option value="INE">INE</option>
               <option value="Pasaporte">Pasaporte</option>
             </select>
@@ -38,6 +52,7 @@ const InitialStep = ({
         </>
       ),
     },
+    
     {
       id: 2,
       tipo: "Comprobante de Domicilio",
@@ -78,8 +93,8 @@ const InitialStep = ({
             <label className={`${styles['label']}`}>
               <span className={`${styles['labelSpan']}`}>¿Qué tipo de factura es?</span>
             </label>
-            <select className={`${styles.select}`}  value={tipoFactura} onChange={(e) => setTipoFactura(e.target.value)}>
-              <option value={[]}>Elige una opción</option>
+            <select className={`${styles.select}`}  value={tipoFactura || ""} onChange={(e) => setTipoFactura(e.target.value)}>
+              <option value="">Elige una opción</option>
               <option value="Factura original">Factura original</option>
               <option value="Refactura de agencia">Refactura de agencia</option>
               <option value="Refactura de aseguradora">Refactura de aseguradora</option>
@@ -88,8 +103,8 @@ const InitialStep = ({
             <label className={`${styles['label']}`}>
               <span className={`${styles['labelSpan']}`}>¿En qué año fue emitida la factura?</span>
             </label>
-            <select className={`${styles.select}`}  value={anoFactura} onChange={(e) => setAnoFactura(e.target.value)}>
-              <option value={[]}>Elige una opción</option>
+            <select className={`${styles.select}`}  value={anoFactura || ""} onChange={(e) => setAnoFactura(e.target.value)}>
+              <option value="">Elige una opción</option>
               {years?.map((year) => (
                 <option key={year} value={year}>
                   {year}
@@ -109,7 +124,7 @@ const InitialStep = ({
       ),
     },
   ];
-  
+
   const content = modalContent.find(item => item.tipo === tipo)?.content;
 
   return (
@@ -125,7 +140,12 @@ const InitialStep = ({
       <div className={`${styles['wrapper-info']}`}>
         <h2>{title}</h2>
         {content}
-        <button type="button" onClick={handlerStep} className="modalBtn tw-w-full md:tw-w-2/3 tw-mt-8 tw-mb-4">
+        <button 
+          type="button" 
+          onClick={handlerStep} 
+          className={`${buttonClass} tw-w-full md:tw-w-2/3 tw-mt-8 tw-mb-4`} 
+          disabled={isButtonDisabled}
+        >
           TOMAR O CARGAR FOTO
         </button>
       </div>

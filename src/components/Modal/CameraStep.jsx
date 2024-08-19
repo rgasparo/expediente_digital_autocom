@@ -10,13 +10,13 @@ const CameraStep = ({ setSelectedFile = '', setStep = '', handleClose, Camera })
   const getIdealResolution = () => {
     const isMobile = window.innerWidth <= 768;
     return {
-      width: (window.innerWidth / 12) * 2.5,
-      height: isMobile ? (window.innerHeight / 5) : (window.innerHeight / 6) * 3
+      width: isMobile ? (window.innerWidth / 1.8) : (window.innerWidth / 5),
+      height: (window.innerHeight / 2)
     };
   };
 
   return (
-    <div className={`${styles['wrapper-camera']} tw-w-10/12 md:tw-w-2/3 lg:tw-w-1/3`}>
+    <div className={`${styles['wrapper-camera']} tw-w-10/12 md:tw-w-2/3 lg:tw-w-2/6`}>
       <div className={`${styles['wrapper-close']} tw-relative tw-p-0`}>
       <div className='tw-w-full tw-flex tw-justify-end'>
           <button type="button" onClick={handleClose}>
