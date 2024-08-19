@@ -44,7 +44,6 @@ const InitialStep = ({
               value={identificacion || ""}
               onChange={(e) => setIdentificacion(e.target.value)}
             >
-              <option value="">Elige una opción</option>
               <option value="INE">INE</option>
               <option value="Pasaporte">Pasaporte</option>
             </select>
