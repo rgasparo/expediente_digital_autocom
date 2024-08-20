@@ -71,21 +71,21 @@ const DocumentsProvider = ({ children }) => {
 
   const isComplete = (doc) => {
     if (doc === 'Comprobante de Domicilio' || doc === 'factura actual') {
-      const document = (docs || []).find((d) => d.doc_type === doc);
+      const document = (docs || [])?.find((d) => d.doc_type === doc);
       if (document) return true;
     }
   
     if (doc === 'Tarjeta de circulación') {
-      const document = (docs || []).find((d) => d.doc_type === doc);
-      const document1 = (docs || []).find((d) => d.doc_type === 'Tarjeta de circulación (vuelta)');
+      const document = (docs || [])?.find((d) => d.doc_type === doc);
+      const document1 = (docs || [])?.find((d) => d.doc_type === 'Tarjeta de circulación (vuelta)');
       if (document && document1) return true;
     }
   
     if (doc === 'identificacion') {
-      const document = (docs || []).find((d) => d.doc_type === 'Pasaporte');
+      const document = (docs || [])?.find((d) => d.doc_type === 'Pasaporte');
       if (document) return true;
-      const document1 = (docs || []).find((d) => d.doc_type === 'INE (Frente)');
-      const document2 = (docs || []).find((d) => d.doc_type === 'INE (vuelta)');
+      const document1 = (docs || [])?.find((d) => d.doc_type === 'INE (Frente)');
+      const document2 = (docs || [])?.find((d) => d.doc_type === 'INE (vuelta)');
       if (document1 && document2) return true;
     }
   
@@ -94,12 +94,12 @@ const DocumentsProvider = ({ children }) => {
   
   const exists = (doc) => {
     if (doc === 'Tarjeta de circulación') {
-      const document = (docs || []).find((d) => d.doc_type === doc);
+      const document = (docs || [])?.find((d) => d.doc_type === doc);
       if (document) return true;
     }
   
     if (doc === 'identificacion') {
-      const document1 = (docs || []).find((d) => d.doc_type === 'INE (Frente)');
+      const document1 = (docs || [])?.find((d) => d.doc_type === 'INE (Frente)');
       if (document1) return true;
     }
     
