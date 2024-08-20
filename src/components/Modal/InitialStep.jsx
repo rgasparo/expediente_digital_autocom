@@ -18,6 +18,7 @@ const InitialStep = ({
 }) => {
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
   const [buttonClass, setButtonClass] = useState('modalBtnDisabled');
+  const [identificacionLocal, setIdentificacionLocal] = useState(identificacion);
 
   useEffect(() => {
     const isDisabled = (tipo === "factura actual" && (!tipoFactura || !anoFactura)) || 
@@ -40,18 +41,17 @@ const InitialStep = ({
               <span className={`${styles['labelSpan']}`}>¿Qué identificación es?</span>
             </label>
             <select 
-              className={`${styles.select}`} 
-              value={identificacion || ""}
-              onChange={(e) => setIdentificacion(e.target.value)}
+              className={`${styles.select}`}
+              value={identificacionLocal || ""}
+              onChange={(e) => setIdentificacionLocal(e.target.value)}
             >
-              <option value="INE">INE</option>
-              <option value="Pasaporte">Pasaporte</option>
+              <option value="INE" key={"INE"}>INE</option>
+              <option value="Pasaporte" key={"Pasaporte"}>Pasaporte</option>
             </select>
           </div>
         </>
       ),
     },
-    
     {
       id: 2,
       tipo: "Comprobante de Domicilio",
@@ -93,11 +93,11 @@ const InitialStep = ({
               <span className={`${styles['labelSpan']}`}>¿Qué tipo de factura es?</span>
             </label>
             <select className={`${styles.select}`}  value={tipoFactura || ""} onChange={(e) => setTipoFactura(e.target.value)}>
-              <option value="">Elige una opción</option>
-              <option value="Factura original">Factura original</option>
-              <option value="Refactura de agencia">Refactura de agencia</option>
-              <option value="Refactura de aseguradora">Refactura de aseguradora</option>
-              <option value="Refactura de empresa">Refactura de empresa</option>
+              <option value="" key={'1'}>Elige una opción</option>
+              <option value="Factura original" key={'2'}>Factura original</option>
+              <option value="Refactura de agencia" key={'3'}>Refactura de agencia</option>
+              <option value="Refactura de aseguradora" key={'4'}>Refactura de aseguradora</option>
+              <option value="Refactura de empresa" key={'5'}>Refactura de empresa</option>
             </select>
             <label className={`${styles['label']}`}>
               <span className={`${styles['labelSpan']}`}>¿En qué año fue emitida la factura?</span>

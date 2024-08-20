@@ -1,4 +1,4 @@
-import {useEffect } from "react"
+import {useEffect, useState } from "react"
 import useDocuments from '../../hooks/useDocuments';
 import Modal from "../../components/Modal/DocumentsModal";
 import Camera from "react-html5-camera-photo";
@@ -9,6 +9,8 @@ import { upload } from "../../utils/modal";
 import "./styles.css";
 
 const Documents = () => {
+
+    const [docFlag, setDocFlag]=useState(false);
     const navigate = useNavigate();
     const querystring = window.location.search
     const params = new URLSearchParams(querystring)
@@ -19,11 +21,8 @@ const Documents = () => {
     if(!expediente || !token ){
         navigate("/notfound")
     }
-
-    useEffect(() => {
-        setExpediente(expediente);
-        setToken(token);
-    }, [expediente, token])
+    
+    console.log(docFlag)
 
     const {
         ano,
@@ -48,25 +47,20 @@ const Documents = () => {
         setStep,
         setAnoFactura,
         setTipoFactura,
-        setAno,
-        setMarca,
-        setModelo,
-        setVersion,
-        setColor,
-        setKilometrake,
-        setOferta,
-        setInspeccion,
-        setFecha,
-        setHora,
         setOpen,
         setTipo,
         uploadDocument,
-        setExpediente,
+        setExpedient,
         setToken,
         isComplete, 
         exists,
         sendMessage
     } = useDocuments()
+
+    useEffect(() => {
+        setExpedient(expediente);
+        setToken(token);
+    }, [expediente, token])
 
     const handlerClick = (e) =>{
         if(e.currentTarget.name==="Tarjeta de circulación"){
@@ -181,38 +175,13 @@ const Documents = () => {
                 identificacion={identificacion}
                 setIdentificacion={setIdentificacion}
                 sendMessage={sendMessage}
-                ano={ano}
-                marca={marca}
-                modelo={modelo}
-                version={version}
-                color={color}
-                kilometraje={kilometraje}
-                oferta={oferta}
-                inspeccion={inspeccion}
-                fecha={fecha}
-                hora={hora}
-                open={open}
-                setAno={setAno}
-                setMarca={setMarca}
-                setModelo={setModelo}
-                setVersion={setVersion}
-                setColor={setColor}
-                setKilometrake={setKilometrake}
-                setOferta={setOferta}
-                setInspeccion={setInspeccion}
-                setFecha={setFecha}
-                setHora={setHora}
-                setTipo={setTipo}
-                setExpediente={setExpediente}
-                setToken={setToken}
-                isComplete={isComplete} 
-                exists={exists}
                 imgDomicilio={imgDomicilio}
                 imgFactura={imgFactura}
                 imgIne={imgIne}
                 imgLicencia={imgLicencia}
                 Camera={Camera}
                 upload={upload}
+                setDocFlag={setDocFlag}
             />:<></>}    
         </div>
     );

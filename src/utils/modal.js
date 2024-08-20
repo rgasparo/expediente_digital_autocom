@@ -1,38 +1,34 @@
 
-export const upload = async(setStep, tipo, identificacion, selectedFile, uploadDocument, sendMessage) => {
+export const upload = async (setStep, tipo, identificacion, selectedFile, uploadDocument, sendMessage, callback) => {
     setStep(4);
-    if(tipo==="identificacion"){
-        if(identificacion==="Pasaporte"){
-            const datos = {
-                doc_type: identificacion,
-                attachment:selectedFile,
-            };
-            await uploadDocument(datos);
-            await sendMessage("Pasaporte");
-        }else{
-            const datos = {
-                doc_type: "INE (Frente)",
-                attachment:selectedFile,
-            };
-            await uploadDocument(datos);
-            await sendMessage("INE (Frente)");
+    
+    const handleUpload = async (docType) => {
+        const datos = {
+            doc_type: docType,
+            attachment: selectedFile,
+        };
+        await uploadDocument(datos);
+        await sendMessage(docType);
+    };
+
+    if (tipo === "identificacion") {
+        if (identificacion === "Pasaporte") {
+            await handleUpload(identificacion);
+        } else {
+            await handleUpload("INE (Frente)");
         }
-    }else if(tipo==="identificacion reverso"){
-        const datos = {
-            doc_type: "INE (vuelta)",
-            attachment:selectedFile,
-        };
-        await uploadDocument(datos);
-        await sendMessage("INE (Vuelta)");
-    }else{
-        const datos = {
-            doc_type: tipo,
-            attachment:selectedFile,
-        };
-        await uploadDocument(datos);
-        await sendMessage(tipo);
+    } else if (tipo === "identificacion reverso") {
+        await handleUpload("INE (vuelta)");
+    } else {
+        await handleUpload(tipo);
     }
-}
+
+    // Ejecuta el callback si está definido
+    if (callback) {
+        callback();
+    }
+};
+
 
 export const b64toBlob = (b64Data, contentType, sliceSize) => {
     contentType = contentType || "";

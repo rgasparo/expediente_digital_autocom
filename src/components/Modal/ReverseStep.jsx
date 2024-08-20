@@ -1,7 +1,12 @@
 import CloseGrayBtn from '../../../src/assets/closeGray.svg';
 import styles from './styles.module.css';
 
-const ReverseStep = ({ title, tipo, handlerStep, handleClose }) => {
+const ReverseStep = ({ title, tipo, handlerStep, handleClose}) => {
+
+  const handleClick = () => {
+    handlerStep;
+  };
+
 
   const reverseContent = [
     {
@@ -45,7 +50,10 @@ const ReverseStep = ({ title, tipo, handlerStep, handleClose }) => {
         <div className={`${styles['wrapper-info']}`}>
           <h2>{title}</h2>
           {content}
-          <button type="button" onClick={handlerStep} className={`${styles.modalBtn} tw-w-full md:tw-w-3/3 tw-mt-8 tw-mb-4 tw-h-12`}>
+          <button
+            type="button"
+            onClick={handleClick}
+            className={`${styles.modalBtn} tw-w-full md:tw-w-3/3 tw-mt-8 tw-mb-4 tw-h-12`}>
             TOMAR O CARGAR FOTO DEL REVERSO
           </button>
         </div>

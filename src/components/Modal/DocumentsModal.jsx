@@ -7,17 +7,6 @@ import ReverseStep from "./ReverseStep";
 import styles from './styles.module.css';
 
 const DocumentsModal = ({
-  ano,
-  marca,
-  modelo,
-  version,
-  color,
-  kilometraje,
-  oferta,
-  inspeccion,
-  fecha,
-  hora,
-  open,
   tipo,
   tipoFactura, 
   anoFactura, 
@@ -29,30 +18,16 @@ const DocumentsModal = ({
   setStep,
   setAnoFactura,
   setTipoFactura,
-  setAno,
-  setMarca,
-  setModelo,
-  setVersion,
-  setColor,
-  setKilometrake,
-  setOferta,
-  setInspeccion,
-  setFecha,
-  setHora,
   setOpen,
-  setTipo,
   uploadDocument,
-  setExpediente,
-  setToken,
-  isComplete, 
-  exists,
   sendMessage,
   imgDomicilio,
   imgFactura,
   imgIne,
   imgLicencia,
   Camera,
-  upload
+  upload,
+  setDocFlag
 }) => {
 
     const STEPS = {
@@ -153,12 +128,13 @@ const DocumentsModal = ({
                 handlerStep={handlerStep}
                 handleClose={handleClose}
                 sendMessage={sendMessage}
+                setDocFlag={setDocFlag}
             />
             );
         case STEPS.LOADING:
             return <LoaderComponent />;
         case STEPS.REVERSE:
-            return <ReverseStep title={title} tipo={tipo} handlerStep={handlerStep} handleClose={handleClose} />;
+            return <ReverseStep title={title} tipo={tipo} handlerStep={handlerStep} handleClose={handleClose}/>;
         default:
             return null;
         }

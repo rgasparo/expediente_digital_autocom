@@ -22,7 +22,7 @@ const DocumentsProvider = ({ children }) => {
   const [hora, setHora] = useState('');
   const [open, setOpen] = useState(false);
   const [tipo, setTipo] = useState('');
-  const [expediente, setExpediente] = useState(undefined);
+  const [expediente, setExpedient] = useState(undefined);
   const [token, setToken] = useState(undefined);
   const [tipoFactura, setTipoFactura]=useState('');
   const [anoFactura, setAnoFactura]=useState('');
@@ -40,14 +40,13 @@ const DocumentsProvider = ({ children }) => {
       Authorization: `Bearer ${token}`,
     },
   };
-
   const getData= async ()=>{
     try {
         const {data} = await clienteAxios.get(
             `/expedients/${expediente}`,
             config
         );
-        console.log("Data: "+JSON.stringify(data));
+        // console.log("Data: "+JSON.stringify(data));
         setAno(data.content.Year);
         setMarca(data.content.Make);
         setModelo(data.content.Model);
@@ -186,7 +185,7 @@ const DocumentsProvider = ({ children }) => {
 
   useEffect(() => {
 
-      console.log("Expedeinte: "+expediente)
+      // console.log("Expedeinte: "+expediente)
       if(expediente!==undefined){
         getData();
       }
@@ -230,7 +229,7 @@ const DocumentsProvider = ({ children }) => {
           setOpen,
           setTipo,
           uploadDocument,
-          setExpediente,
+          setExpedient,
           setToken,
           isComplete, 
           exists,
