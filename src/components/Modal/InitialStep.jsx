@@ -6,7 +6,7 @@ const InitialStep = ({
   tipo,
   title,
   identificacion,
-  setIdentificacion,
+  // setIdentificacion,
   tipoFactura,
   setTipoFactura,
   anoFactura,
