@@ -20,7 +20,6 @@ export default defineConfig({
       },
       shared: [
         "react", 
-        "react-dom", 
         "react-axios", 
         "react-router-dom",
         "react-html5-camera-photo",
