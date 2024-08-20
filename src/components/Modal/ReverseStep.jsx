@@ -3,10 +3,6 @@ import styles from './styles.module.css';
 
 const ReverseStep = ({ title, tipo, handlerStep, handleClose}) => {
 
-  const handleClick = () => {
-    handlerStep;
-  };
-
 
   const reverseContent = [
     {
@@ -52,7 +48,7 @@ const ReverseStep = ({ title, tipo, handlerStep, handleClose}) => {
           {content}
           <button
             type="button"
-            onClick={handleClick}
+            onClick={handlerStep}
             className={`${styles.modalBtn} tw-w-full md:tw-w-3/3 tw-mt-8 tw-mb-4 tw-h-12`}>
             TOMAR O CARGAR FOTO DEL REVERSO
           </button>
