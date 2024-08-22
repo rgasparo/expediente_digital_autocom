@@ -186,8 +186,12 @@
   padding: 80px 0
 }
 
-.modal-lista{
-  padding-left: 20px;
+.modalLista{
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
 }
 
 .nota-factura{

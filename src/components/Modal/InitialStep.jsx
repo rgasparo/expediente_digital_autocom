@@ -34,8 +34,8 @@ const InitialStep = ({
       tipo: "identificacion",
       content: (
         <>
-          <p>Enfoca bien y captura el documento completo.</p>
-          <p className="md:tw-mt-0">Evita reflejos o sombras.</p>
+          <p className='tw-mt-2'>Enfoca bien y captura el documento completo.</p>
+          <p>Evita reflejos o sombras.</p>
           <div className="tw-grid tw-grid-cols-1 tw-gap-4 tw-mt-4">
             <label className={`${styles['label']}`}>
               <span className={`${styles['labelSpan']}`}>¿Qué identificación es?</span>
@@ -58,7 +58,7 @@ const InitialStep = ({
       content: (
         <>
           <p>Los documentos permitidos son:</p>
-          <ul className={`${styles['list-disc']} modal-lista`}>
+          <ul className={`${styles.modalLista} tw-list-disc tw-text-left`}>
             <li>Recibo de luz</li>
             <li>Recibo de agua</li>
             <li>Recibo predial</li>
@@ -73,7 +73,7 @@ const InitialStep = ({
       tipo: "Tarjeta de circulación",
       content: (
         <>
-          <p>Enfoca bien y captura el documento completo.</p>
+          <p className='tw-mt-2'>Enfoca bien y captura el documento completo.</p>
           <p className="md:tw-mt-0">Evita reflejos o sombras.</p>
           <p>
             Si la tarjeta de circulación no está a tu nombre necesitarás llevar copia de la identificación del propietario de la tarjeta de circulación el día de la inspección para poder realizar la venta.

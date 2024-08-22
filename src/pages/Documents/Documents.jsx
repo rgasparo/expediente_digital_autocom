@@ -52,7 +52,7 @@ const Documents = () => {
         uploadDocument,
         setExpedient,
         setToken,
-        //isComplete, 
+        isComplete, 
         exists,
         sendMessage
     } = useDocuments()
@@ -62,7 +62,6 @@ const Documents = () => {
         setToken(token);
     }, [expediente, token])
 
-    const isComplete = false;
 
     const handlerClick = (e) =>{
         if(e.currentTarget.name==="Tarjeta de circulación"){
