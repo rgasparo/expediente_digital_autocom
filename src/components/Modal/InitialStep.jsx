@@ -57,7 +57,7 @@ const InitialStep = ({
       tipo: "Comprobante de Domicilio",
       content: (
         <>
-          <p>Los documentos permitidos son:</p>
+          <p className='tw-mt-6'>Los documentos permitidos son:</p>
           <ul className={`${styles.modalLista} tw-list-disc tw-text-left`}>
             <li>Recibo de luz</li>
             <li>Recibo de agua</li>
@@ -73,9 +73,9 @@ const InitialStep = ({
       tipo: "Tarjeta de circulación",
       content: (
         <>
-          <p className='tw-mt-2'>Enfoca bien y captura el documento completo.</p>
-          <p className="md:tw-mt-0">Evita reflejos o sombras.</p>
-          <p>
+          <p className='tw-mt-4'>Enfoca bien y captura el documento completo.</p>
+          <p>Evita reflejos o sombras.</p>
+          <p className="tw-mt-2">
             Si la tarjeta de circulación no está a tu nombre necesitarás llevar copia de la identificación del propietario de la tarjeta de circulación el día de la inspección para poder realizar la venta.
           </p>
         </>
