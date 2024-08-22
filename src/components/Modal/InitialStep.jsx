@@ -138,7 +138,9 @@ const InitialStep = ({
       <img className={`${styles['bgImg']} tw-w-full`} src={header} alt={tipo} />
       <div className={`${styles['wrapper-info']}`}>
         <h2>{title}</h2>
+        <div className='fontColorText'>
         {content}
+        </div>
         <button 
           type="button" 
           onClick={handlerStep} 

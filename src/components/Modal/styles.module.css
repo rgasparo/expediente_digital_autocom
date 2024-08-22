@@ -21,6 +21,10 @@
   background-position-y: 5px;
 }
 
+.fontColorText{
+  color: #696969;
+}
+
 .label{
   font-family: Montserrat;
   font-size: 10px;
@@ -191,7 +195,6 @@
     margin-left: 20px;
     font-size: 14px;
     line-height: 19px;
-    color: #696969;
 }
 
 .nota-factura{
@@ -406,6 +409,5 @@
     margin-left: 20px;
     font-size: 16px;
     line-height: 19px;
-    color: #696969;
 }
 }
