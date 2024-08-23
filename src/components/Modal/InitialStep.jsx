@@ -6,7 +6,7 @@ const InitialStep = ({
   tipo,
   title,
   identificacion,
-  // setIdentificacion,
+  setIdentificacion,
   tipoFactura,
   setTipoFactura,
   anoFactura,
@@ -43,7 +43,7 @@ const InitialStep = ({
             <select 
               className={`${styles.select}`}
               value={identificacionLocal || ""}
-              onChange={(e) => setIdentificacionLocal(e.target.value)}
+              onChange={(e) => {setIdentificacionLocal(e.target.value), setIdentificacion(e.target.value)}}
             >
               <option value="INE" key={"INE"}>INE</option>
               <option value="Pasaporte" key={"Pasaporte"}>Pasaporte</option>
